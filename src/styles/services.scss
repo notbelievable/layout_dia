@@ -121,13 +121,11 @@
 
   @include tablet {
     &-card:nth-child(2) {
-      // 1
       grid-row: 2 / span 1;
       grid-column: 1 / span 3;
     }
 
     &-card:nth-child(3) {
-      // 2
       position: relative;
       top: 210px;
       grid-column: 4 / span 3;
@@ -136,13 +134,11 @@
     }
 
     &-card:nth-child(4) {
-      // 3
       grid-row: 3 / span 1;
       grid-column: span 3;
     }
 
     &-card:nth-child(5) {
-      // 4
       position: relative;
       top: 210px;
       grid-row: 2;
