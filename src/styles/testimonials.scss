@@ -81,7 +81,8 @@
       }
 
       &:hover {
-        color: violet;
+        cursor: pointer;
+        color: $color-blue;
         text-shadow: 2px 2px 4px;
       }
     }

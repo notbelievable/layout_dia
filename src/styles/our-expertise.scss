@@ -57,6 +57,7 @@
 
     &:hover {
       transform: scale(1.1);
+      cursor: pointer;
     }
 
     &-img {
@@ -86,7 +87,7 @@
       transition: all 0.3s ease;
 
       &:hover {
-        color: violet;
+        color: $color-blue;
         text-shadow: 2px 2px 4px;
       }
     }
