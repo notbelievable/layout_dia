@@ -8,9 +8,9 @@ const menuLinks = document.querySelectorAll('.nav__link');
 
 
 const backImages = [
-  '../src/images/hero-screen2.png',
-  '../src/images/qPojqUji_y4.png',
-  '../src/images/GwVmBgpP-PQ.png'];
+  'src/images/hero-screen2.png',
+  'src/images/qPojqUji_y4.png',
+  'src/images/GwVmBgpP-PQ.png'];
 
 let currentIndex = 0;
 
