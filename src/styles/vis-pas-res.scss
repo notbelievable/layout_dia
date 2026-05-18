@@ -1,3 +1,5 @@
+@use './_index' as *;
+
 .vis-pas-res {
   @include padd-inl;
 

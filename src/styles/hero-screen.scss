@@ -1,3 +1,5 @@
+@use './_index' as *;
+
 .hero-screen {
   box-sizing: border-box;
   position: relative;
@@ -90,5 +92,26 @@
     font-weight: 400;
     line-height: 140%;
     color: $color-white;
+  }
+}
+
+.hero-section {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  background-color: $color-bl;
+  width: 100%;
+
+  @include desktop {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    margin-block: -1px;
+    align-items: stretch;
+    border-radius: 0 0 30px 30px;
+  }
+
+  @media (min-width: 2560px) {
+    max-width: 1600px;
+    margin-inline: auto;
   }
 }
