@@ -1,17 +1,41 @@
-@use './_index' as *;
+@use './index' as *;
 
 .hero-screen {
   box-sizing: border-box;
   position: relative;
   z-index: 2;
   margin-block: -30px;
-  background-image: url(../images/hero-screen2.png);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
+  overflow: hidden;
   min-height: 390px;
   border-radius: 30px;
   transition: background-image 0.3s ease;
+
+  &__images {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+  }
+
+  &__img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    transition: opacity 0.3s ease;
+    opacity: 0;
+    visibility: hidden;
+
+    &.active {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
 
   @include desktop {
     padding: 0;
@@ -22,7 +46,6 @@
   }
 
   @include design {
-    background-image: url(../images/backphoto.png);
     grid-column: 8/13;
   }
 
@@ -31,6 +54,7 @@
 
     padding-bottom: 24px;
     position: absolute;
+    z-index: 5;
     bottom: 0;
     left: 0;
 

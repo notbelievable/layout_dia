@@ -5,39 +5,37 @@ const navMenu = document.querySelector('#nav-menu');
 const noScroll = document.body;
 const menuLinks = document.querySelectorAll('.nav__link');
 
-
-
-const backImages = [
-  './src/images/hero-screen2.png',
-  './src/images/qPojqUji_y4.png',
-  './src/images/GwVmBgpP-PQ.png'];
-
-let currentIndex = 0;
-
-const slider = document.getElementById('hero-slider');
+const slides = document.querySelectorAll('.hero-screen__img');
 const btnLeft = document.getElementById('btn-left');
 const btnRight = document.getElementById('btn-right');
 
-function changeBackground(index) {
-  slider.style.backgroundImage = `url(${backImages[index]})`;
+let currentIndex = 0;
+
+function changeSlider(index) {
+  slides.forEach(slide => {
+    slide.classList.remove('active');
+  });
+  slides[index].classList.add('active');
 }
 
-btnRight.addEventListener('click', () => {
+btnRight.addEventListener('click', (e) => {
+  e.preventDefault();
   currentIndex++;
 
-  if (currentIndex >= backImages.length) {
+  if (currentIndex >= slides.length) {
     currentIndex = 0;
   }
-  changeBackground(currentIndex);
+  changeSlider(currentIndex);
 });
 
-btnLeft.addEventListener('click', () => {
+btnLeft.addEventListener('click', (e) => {
+  e.preventDefault();
   currentIndex--;
 
   if (currentIndex < 0) {
-    currentIndex = backImages.length - 1;
+    currentIndex = slides.length - 1;
   }
-  changeBackground(currentIndex);
+  changeSlider(currentIndex);
 });
 
 
